@@ -1,15 +1,15 @@
-import { botSetup } from "./bot";
+// import { botSetup } from "./bot";
 
-(function () {
-    try {
-        botSetup().launch({
-            webhook: {
-                host: '80.90.179.53',
-                domain: 'https://1408935-cz73058.tw1.ru',
-                port: 443,
-            }
-        })
-    } catch (err) {
-        console.log(err)
-    }
-}())
+import { app } from "./bot";
+
+// (function () {
+//     try {
+//         botSetup().launch()
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }())
+
+app.listen(3000, () => {
+    console.log('Bot is running on port 3000');
+});
